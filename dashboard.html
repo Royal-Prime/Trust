@@ -85,6 +85,21 @@ body {
     color: #0a1f44;
 }
 
+/* Logout Button */
+.logout-btn {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #c9302c;
+}
+
 /* Balance Card */
 .balance-card {
     background: linear-gradient(135deg, #0a1f44, #1c3d91);
@@ -243,14 +258,16 @@ table th {
         <li>Payments</li>
         <li>Statements</li>
         <li>Settings</li>
-        <li>Logout</li>
     </ul>
 </div>
 
 <div class="main">
     <div class="header">
         <h1>Welcome Back, John</h1>
-        <div class="user">Account ID: RPT-203948</div>
+        <div>
+            <span class="user">Account ID: RPT-203948</span>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
     </div>
 
     <div class="balance-card">
@@ -258,9 +275,9 @@ table th {
         <h2>$24,850.75</h2>
 
         <div class="quick-actions">
-            <button>Transfer</button>
-            <button>Pay Bills</button>
-            <button>Deposit</button>
+    <button onclick="window.location.href='https://www.fcrunion.com/request-form/'">Transfer</button>
+    <button onclick="window.location.href='https://www.fcrunion.com/request-form/'">Pay Bills</button>
+    <button onclick="window.location.href='https://www.fcrunion.com/request-form/'">Deposit</button>
         </div>
     </div>
 
@@ -332,6 +349,16 @@ table th {
         </table>
     </div>
 </div>
+
+<script>
+function goToRequest() {
+    window.location.href = "https://www.fcrunion.com/request-form/";
+}
+
+function logout() {
+    window.location.href = "https://www.fcrunion.com/onboarding/";
+}
+</script>
 
 </body>
 </html>
