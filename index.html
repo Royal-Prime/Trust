@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Prime Trust - Login</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0a1f44, #1c3d91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0a1f44;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0a1f44;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #132d63;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+@media(max-width: 500px) {
+    .login-container {
+        margin: 20px;
+        padding: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+    <h2>Royal Prime Trust</h2>
+
+    <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+    </div>
+
+    <button onclick="login()">Login</button>
+
+    <div class="error" id="error-message"></div>
+
+    <div class="footer-text">
+        Secure Online Banking Portal
+    </div>
+</div>
+
+<script>
+function login() {
+    // Demo credentials
+    const validUsername = "john123";
+    const validPassword = "royal@2026";
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
+
+    if (username === validUsername && password === validPassword) {
+        window.location.href = "dashboard.html";
+    } else {
+        errorMessage.textContent = "Invalid username or password.";
+    }
+}
+</script>
+
+</body>
+</html>
